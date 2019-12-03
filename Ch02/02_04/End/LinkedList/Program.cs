@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-/// <summary>
-/// The following code example demonstrates several features of the 
-/// LinkedList<T> class.
-/// </summary>
+
 namespace LinkedLists
 {
     class Program

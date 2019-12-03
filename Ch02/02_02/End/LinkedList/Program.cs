@@ -8,14 +8,20 @@ namespace SinglyLinkedList
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            //  TODO
+            SinglyLinkedList newList = new SinglyLinkedList();
+            newList.insertFirst(100);
+            newList.insertFirst(50);
+            newList.insertFirst(99);
+            newList.insertFirst(88);
+            newList.displayList();
         }
     }
     public class SinglyLinkedList
     {
         private Node first;
+
         public bool isEmpty()
         {
             return (first == null);
@@ -36,7 +42,34 @@ namespace SinglyLinkedList
             return temp;
         }
 
+        public void displayList()
+        {
+            System.Console.WriteLine("List (first -- last) ");
+            Node current = first;
+
+            while (current != null)
+            {
+                current.displayNode();
+                current = current.next;
+            }
+
+            System.Console.WriteLine();
+        }
+
+        public void insertLast(int data)
+        {
+            Node current = first;
+            while(current.next != null)
+            {
+                current = current.next;
+            }
+
+            Node newNode = new Node();
+            newNode.data = data;
+            current.next = newNode;
+        }
     }
+
 
     public class Node
     {
