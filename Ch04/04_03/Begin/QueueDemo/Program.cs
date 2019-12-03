@@ -7,7 +7,19 @@ namespace QueueDemo
     {
         static void Main(string[] args)
         {
-            //TODO
+            Queue myQueue = new Queue(5);
+            myQueue.insert(100);
+            myQueue.insert(200);
+            myQueue.insert(300);
+            myQueue.insert(400);
+            myQueue.insert(500);
+            myQueue.view();
+
+            WriteLine($"The front item is {myQueue.peekFront()} ");
+
+            WriteLine("About to remove item from queue.");
+            myQueue.remove();
+            WriteLine($"The front item is {myQueue.peekFront()} ");
         }
     }
 
@@ -70,6 +82,16 @@ namespace QueueDemo
         private bool isFull()
         {
             return (items == maxSize);
+        }
+
+        public void view()
+        {
+            Console.Write("[");
+            for (int i = 0; i < myQueue.Length; i++)
+            {
+                Write(myQueue[i] + " ");
+            }
+            Console.WriteLine("]");
         }
     }
 }

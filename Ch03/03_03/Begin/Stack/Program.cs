@@ -17,6 +17,9 @@ namespace Stack
             theStack.push("Alien");
             theStack.push("Alien 2");
 
+            Console.WriteLine("We are about to peek.");
+            Console.WriteLine("'" + theStack.peek() + " is at the top of the stack.'");
+
             System.Console.WriteLine("============ \nThe Stack contains:\n");
             while(!theStack.isEmpty())
             {
