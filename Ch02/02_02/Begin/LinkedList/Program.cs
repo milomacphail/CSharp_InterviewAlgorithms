@@ -4,15 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SinglyLinkedList
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            using System.Collections.Generic;
-using static System.Console;
-
 namespace LinearSearch
 {
     class Program
@@ -90,8 +81,4 @@ namespace LinearSearch
             System.Console.WriteLine("<" + data + ">");
         }
     }
-}
-        }
-    }
-
 }
